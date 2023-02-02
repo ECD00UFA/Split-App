@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment"
+    android:id="@+id/nav_auth">
+
+    <fragment android:id="@+id/homeFragment"
+        android:name="com.example.splitit.ui.dashBoard.fragments.HomeFragment"
+        tools:layout="@layout/fragment_home"
+        android:label="HomeFragment" />
+
+    <fragment android:id="@+id/friendFragment"
+        android:name="com.example.splitit.ui.dashBoard.fragments.FriendsFragment"
+        tools:layout="@layout/fragment_freinds"
+        android:label="FriendFragment" />
+
+    <fragment android:id="@+id/activityFragment"
+        android:name="com.example.splitit.ui.dashBoard.fragments.ActivityFragment"
+        tools:layout="@layout/fragment_activity"
+        android:label="ActivityFragment" />
+
+    <fragment android:id="@+id/accountFragment"
+        android:name="com.example.splitit.ui.dashBoard.fragments.AccountFragment"
+        tools:layout="@layout/fragment_account"
+        android:label="AccountFragment" />
+
+    <fragment android:id="@+id/createGroupFragment"
+        android:name="com.example.splitit.ui.dashBoard.fragments.CreateGroupFragment"
+        tools:layout="@layout/fragment_create_group"
+        android:label="CreateGroupFragment" />
+
+    <fragment android:id="@+id/addMembersFragment"
+        android:name="com.example.splitit.ui.dashBoard.fragments.AddMembersFragment"
+        tools:layout="@layout/fragment_add_members"
+        android:label="AddMembersFragment" />
+
+    <fragment android:id="@+id/accountSettingFragment"
+        android:name="com.example.splitit.ui.dashBoard.fragments.AccountSettingFragment"
+        tools:layout="@layout/fragment_account_settings"
+        android:label="AccountSettingFragment" />
+
+    <fragment android:id="@+id/addExpenseFragment"
+        android:name="com.example.splitit.ui.dashBoard.fragments.AddExpenseFragment"
+        tools:layout="@layout/fragment_account_settings"
+        android:label="AccountSettingFragment" />
+
+
+
+</navigation>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RadioButton
+        android:id="@+id/allGroupRadioBtn"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:buttonTint="@color/appYellow"/>
+
+    <TextView
+        android:id="@+id/allGroupTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/all_groups"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/appTextColor"
+        app:layout_constraintBottom_toBottomOf="@id/allGroupRadioBtn"
+        app:layout_constraintStart_toEndOf="@id/allGroupRadioBtn"
+        app:layout_constraintTop_toTopOf="@id/allGroupRadioBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RadioButton
+        android:id="@+id/outStandingRadioBtn"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/allGroupRadioBtn"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:buttonTint="@color/appYellow"/>
+
+    <TextView
+        android:id="@+id/outStandingTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/outstanding_balances"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/appTextColor"
+        app:layout_constraintBottom_toBottomOf="@id/outStandingRadioBtn"
+        app:layout_constraintStart_toEndOf="@id/outStandingRadioBtn"
+        app:layout_constraintTop_toTopOf="@id/outStandingRadioBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <RadioButton
+        android:id="@+id/groupsYouOweRadioBtn"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/outStandingRadioBtn"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:buttonTint="@color/appYellow"/>
+
+    <TextView
+        android:id="@+id/groupsYouOweTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/groups_you_owe"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/appTextColor"
+        app:layout_constraintBottom_toBottomOf="@id/groupsYouOweRadioBtn"
+        app:layout_constraintStart_toEndOf="@id/groupsYouOweRadioBtn"
+        app:layout_constraintTop_toTopOf="@id/groupsYouOweRadioBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RadioButton
+        android:id="@+id/groupsThatOweRadioBtn"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/groupsYouOweRadioBtn"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:buttonTint="@color/appYellow"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/groups_that_owe_you"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/appTextColor"
+        app:layout_constraintBottom_toBottomOf="@id/groupsThatOweRadioBtn"
+        app:layout_constraintStart_toEndOf="@id/groupsThatOweRadioBtn"
+        app:layout_constraintTop_toTopOf="@id/groupsThatOweRadioBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

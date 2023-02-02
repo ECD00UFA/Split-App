@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/accountTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/account"
+        android:textColor="@color/appTextColor"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/accountTxt"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="13dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userProfile"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_img"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/cameraImg"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:src="@drawable/ic_camera"
+                android:clipToOutline="true"
+                app:layout_constraintBottom_toBottomOf="@id/userProfile"
+                app:layout_constraintEnd_toEndOf="@id/userProfile"
+                android:layout_marginEnd="-10dp"
+                android:background="@color/white"
+                />
+
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/user_name"
+                android:textColor="@color/appTextColor"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintStart_toEndOf="@id/cameraImg"
+                app:layout_constraintTop_toTopOf="@id/userProfile" />
+
+            <TextView
+                android:id="@+id/userEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/username_gmail_com"
+                android:textColor="@color/appTextColor"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="@id/userName"
+                app:layout_constraintTop_toBottomOf="@id/userName" />
+
+            <ImageView
+                android:id="@+id/editImg"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/ic_edit"
+                app:layout_constraintBottom_toBottomOf="@id/userEmail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/userName" />
+
+            <View
+                android:id="@+id/detailView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@color/appViewColor"
+                app:layout_constraintTop_toBottomOf="@id/userProfile" />
+
+            <ImageView
+                android:id="@+id/scanImg"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:src="@drawable/ic_scan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailView"
+               />
+
+            <TextView
+                android:id="@+id/scanTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/scan"
+                android:textColor="@color/appTextColor"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/scanImg"
+                app:layout_constraintStart_toEndOf="@+id/scanImg"
+                app:layout_constraintTop_toTopOf="@+id/scanImg" />
+
+            <ImageView
+                android:id="@+id/splititProImg"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:src="@drawable/ic_premium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scanImg"
+                />
+
+            <TextView
+                android:id="@+id/splititProTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/splitit_pro"
+                android:textColor="@color/appTextColor"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/splititProImg"
+                app:layout_constraintStart_toEndOf="@+id/splititProImg"
+                app:layout_constraintTop_toTopOf="@+id/splititProImg" />
+
+            <TextView
+                android:id="@+id/preferenceTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/preferences"
+                android:textColor="@color/appTextColor"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/splititProImg" />
+
+
+            <ImageView
+                android:id="@+id/emailSettingImg"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:src="@drawable/ic_email"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/preferenceTxt"
+                 />
+
+            <TextView
+                android:id="@+id/emailSettingTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/email_settings"
+                android:textColor="@color/appTextColor"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/emailSettingImg"
+                app:layout_constraintStart_toEndOf="@+id/emailSettingImg"
+                app:layout_constraintTop_toTopOf="@+id/emailSettingImg"
+                app:layout_constraintVertical_bias="0.6" />
+
+            <ImageView
+                android:id="@+id/devicePushNotificationImg"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:src="@drawable/ic_notification"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/emailSettingImg"
+                 />
+
+            <TextView
+                android:id="@+id/devicePushNotificationTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/device_and_push_notification_settings"
+                android:textColor="@color/appTextColor"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/devicePushNotificationImg"
+                app:layout_constraintStart_toEndOf="@+id/devicePushNotificationImg"
+                app:layout_constraintTop_toTopOf="@+id/devicePushNotificationImg"
+                app:layout_constraintVertical_bias="0.6" />
+
+
+            <ImageView
+                android:id="@+id/passcodeImg"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:src="@drawable/ic_passcode"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/devicePushNotificationImg"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/passcodeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/passcode"
+                android:textColor="@color/appTextColor"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/passcodeImg"
+                app:layout_constraintStart_toEndOf="@+id/passcodeImg"
+                app:layout_constraintTop_toTopOf="@+id/passcodeImg"
+                app:layout_constraintVertical_bias="0.6" />
+
+            <TextView
+                android:id="@+id/feedbackTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/feedback"
+                android:textColor="@color/appTextColor"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/passcodeImg" />
+
+            <ImageView
+                android:id="@+id/rateSplititImg"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:src="@drawable/ic_rate_app"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/feedbackTxt"
+                />
+
+            <TextView
+                android:id="@+id/rateSplititTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/rate_splitit"
+                android:textColor="@color/appTextColor"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/rateSplititImg"
+                app:layout_constraintStart_toEndOf="@+id/rateSplititImg"
+                app:layout_constraintTop_toTopOf="@+id/rateSplititImg"
+                app:layout_constraintVertical_bias="0.6" />
+
+            <ImageView
+                android:id="@+id/contactUsImg"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:src="@drawable/ic_contact_us"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rateSplititImg"
+               />
+
+            <TextView
+                android:id="@+id/contactUsTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/contact_splitit_support"
+                android:textColor="@color/appTextColor"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/contactUsImg"
+                app:layout_constraintStart_toEndOf="@+id/contactUsImg"
+                app:layout_constraintTop_toTopOf="@+id/contactUsImg"
+                app:layout_constraintVertical_bias="0.6" />
+
+            <View
+                android:id="@+id/preferenceView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@color/appViewColor"
+                app:layout_constraintTop_toBottomOf="@id/contactUsImg" />
+
+            <ImageView
+                android:id="@+id/logoutImg"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:src="@drawable/ic_logout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/preferenceView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:tint="@color/appYellow"/>
+
+            <TextView
+                android:id="@+id/logoutTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/log_out"
+                android:textColor="@color/appYellow"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/logoutImg"
+                app:layout_constraintStart_toEndOf="@+id/logoutImg"
+                app:layout_constraintTop_toTopOf="@+id/logoutImg"
+                app:layout_constraintVertical_bias="0.6" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
